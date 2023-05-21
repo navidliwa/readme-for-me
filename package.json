@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/navidliwa/readme-for-me#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "inquirer-list-input": "^0.1.2"
   }
 }
