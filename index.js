@@ -35,7 +35,7 @@ const licenseList = [
     "Zlib",
 ];
 
-function writeToFile(fileName, data) {
+function renderREADME(fileName, data) {
     inquirer.registerPrompt('list-input', require('inquirer-list-input'));
     inquirer.prompt([
         {
@@ -108,4 +108,69 @@ function writeToFile(fileName, data) {
             message: questions[12],
         }
     ])
-    
+    .then((response) => {
+        const {
+            title,
+            description,
+            installation,
+            usage,
+            credits,
+            license,
+            badges,
+            features,
+            contributing,
+            tests,
+            questions,
+            username,
+            email
+        } = response;
+        const badge = badgeList[license];
+        const licenseName = licenseList[license];
+
+        const readmeText =
+            `
+                # ${title}\n\n${badge}\n\n
+                ## Description\n${description}\n\n
+                ## Table of Contents\n- 
+                [Installation](#installation)\n- 
+                [Usage](#usage)\n- 
+                [Credits](#credits)\n- 
+                [License](#license)\n- 
+                [Badges](#badges)\n- 
+                [Features](#features)\n- 
+                [Contributing](#contributing)\n- 
+                [Tests](#tests)\n- 
+                [Questions](#questions)\n\n
+                ## Installation\n${installation}\n\n
+                ## Usage\n${usage}\n\n
+                ## Credits\n${credits}\n\n
+                ## License\n${licenseName}\n\n
+                ## Badges\n${badges}\n\n
+                ## Features\n${features}\n\n
+                ## Contributing\n${contributing}\n\n
+                ## Tests\n${tests}\n\n
+                ## Questions\n${questions}\n\n
+                GitHub: [${username}](https://github.com/${username})\n\n
+                Email: ${email}
+            `;
+
+        fs.writeFile('README.md', readmeText, (err) => {
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('README.md file generated successfully.');
+            }
+        });
+    });
+}
+
+function init() {
+    fs.unlink('./README.md', (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
+  }
+  
+  init();
+  renderREADME();
