@@ -28,7 +28,7 @@ To install simply download or clone this repository into a folder of your choosi
 After installed open up a terminal from the root folder of this project and invoke "node index.js" in the command line. This will start the program and all you have to do is follow the prompts!
 
 ## License
-MIT
+Licensed under the MIT License.
 
 ## Features
 - Automatic README.md file generation
