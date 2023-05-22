@@ -129,29 +129,29 @@ function renderREADME(fileName, data) {
 
         const readmeText =
             `
-                # ${title}\n\n${badge}\n\n
-                ## Description\n${description}\n\n
-                ## Table of Contents\n- 
-                [Installation](#installation)\n- 
-                [Usage](#usage)\n- 
-                [Credits](#credits)\n- 
-                [License](#license)\n- 
-                [Badges](#badges)\n- 
-                [Features](#features)\n- 
-                [Contributing](#contributing)\n- 
-                [Tests](#tests)\n- 
-                [Questions](#questions)\n\n
-                ## Installation\n${installation}\n\n
-                ## Usage\n${usage}\n\n
-                ## Credits\n${credits}\n\n
-                ## License\n${licenseName}\n\n
-                ## Badges\n${badges}\n\n
-                ## Features\n${features}\n\n
-                ## Contributing\n${contributing}\n\n
-                ## Tests\n${tests}\n\n
-                ## Questions\n${questions}\n\n
-                GitHub: [${username}](https://github.com/${username})\n\n
-                Email: ${email}
+# ${title}\n\n${badge}\n\n
+## Description\n${description}\n\n
+## Table of Contents\n
+- [Installation](#installation)\n
+- [Usage](#usage)\n
+- [Credits](#credits)\n
+- [License](#license)\n
+- [Badges](#badges)\n
+- [Features](#features)\n
+- [Contributing](#contributing)\n
+- [Tests](#tests)\n
+- [Questions](#questions)\n\n
+## Installation\n${installation}\n\n
+## Usage\n${usage}\n\n
+## Credits\n${credits}\n\n
+## License\n${licenseName}\n\n
+## Badges\n${badges}\n\n
+## Features\n${features}\n\n
+## Contributing\n${contributing}\n\n
+## Tests\n${tests}\n\n
+## Questions\n${questions}\n\n
+GitHub: [${username}](https://github.com/${username})\n\n
+Email: ${email}
             `;
 
         fs.writeFile('README.md', readmeText, (err) => {
