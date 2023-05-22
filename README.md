@@ -5,7 +5,7 @@
 
 
 ## Description
-README for me is a simple program that can be run in your terminal to create a README.md file for your projects! When run, it'll give you prompts in the command and it'll use your answers to create and populate a formatted README.md file. [Click here for a video demonstrating README for Me's usage!](https://www.youtube.com/watch?v=v8aqNrwZXOQ)
+README for me is a simple program that can be run in your terminal to create a README.md file for your projects! When run, it'll give you prompts in the command and it'll use your answers to create and populate a formatted README.md file. This README.md file was created using this program, after which I made some slight edits. [Click here for a video demonstrating README for Me's usage!](https://www.youtube.com/watch?v=v8aqNrwZXOQ)
 
 
 ## Table of Contents
